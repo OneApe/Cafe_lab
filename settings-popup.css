@@ -1,0 +1,192 @@
+.settings-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.settings-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    animation: slideIn 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.settings-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close-settings-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.close-settings-btn:hover {
+    color: #333;
+}
+
+.settings-section {
+    margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+    color: #444;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.settings-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.settings-option:hover {
+    background-color: #f8f8f8;
+    border-color: #d0d0d0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.option-label i {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.option-label span {
+    color: #333;
+    font-weight: 500;
+}
+
+.currency-select, .language-select, .theme-select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.currency-select:hover, .language-select:hover, .theme-select:hover {
+    border-color: #ccc;
+}
+
+.currency-select:focus, .language-select:focus, .theme-select:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.preview-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.preview-section p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.preview-price {
+    font-weight: 600;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.settings-success {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e6f7e6;
+    color: #2e7d32;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.settings-success i {
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .settings-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .settings-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .settings-option {
+        padding: 0.8rem;
+    }
+
+    .currency-select, .language-select, .theme-select {
+        padding: 0.4rem 0.8rem;
+    }
+} 

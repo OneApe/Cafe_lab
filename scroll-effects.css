@@ -1,0 +1,326 @@
+/* Scroll Effects and Animations for Cafe-Lab Website */
+
+/* Base animation styles */
+.animate-section,
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+/* Specific animations for different sections */
+.main-content.animate-section {
+    transform: translateY(50px);
+}
+
+.coffee-types.animate-section {
+    transform: translateY(40px);
+}
+
+.dessert-menu.animate-section {
+    transform: translateY(35px);
+}
+
+.drinks-showcase.animate-section {
+    transform: translateY(45px);
+}
+
+.contact-section.animate-section {
+    transform: translateY(30px);
+}
+
+/* Staggered animations for items */
+.menu-item.animate-item,
+.coffee-card.animate-item,
+.dessert-card.animate-item,
+.drink-card.animate-item,
+.contact-item.animate-item {
+    transform: translateY(20px);
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, #D4A373, #CCD5AE);
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+    will-change: width;
+}
+
+/* Parallax effect for header */
+header {
+    background-attachment: fixed;
+    background-position: center top;
+    will-change: background-position;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Visible class to trigger animations */
+.animate-section.visible,
+.animate-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for buttons */
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, background-color, box-shadow;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations for images */
+.menu-item img,
+.coffee-card img,
+.dessert-card img,
+.drink-card img {
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.menu-item:hover img,
+.coffee-card:hover img,
+.dessert-card:hover img,
+.drink-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Animations for text elements */
+.menu-item h3,
+.coffee-card h3,
+.dessert-card h3,
+.drink-card h3 {
+    transition: color 0.3s ease;
+    will-change: color;
+}
+
+.menu-item:hover h3,
+.coffee-card:hover h3,
+.dessert-card:hover h3,
+.drink-card:hover h3 {
+    color: #D4A373;
+}
+
+/* Animations for descriptions */
+.menu-item p,
+.coffee-card p,
+.dessert-card p,
+.drink-card p {
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+}
+
+.menu-item:hover p,
+.coffee-card:hover p,
+.dessert-card:hover p,
+.drink-card:hover p {
+    opacity: 0.9;
+}
+
+/* Animations for prices */
+.price {
+    transition: transform 0.3s ease, color 0.3s ease;
+    will-change: transform, color;
+}
+
+.menu-item:hover .price,
+.coffee-card:hover .price,
+.dessert-card:hover .price,
+.drink-card:hover .price {
+    transform: scale(1.1);
+    color: #D4A373;
+}
+
+/* Special animations for announcements */
+.announcement {
+    animation: pulse 2s infinite;
+    will-change: transform, box-shadow;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.4);
+    }
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(212, 163, 115, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(212, 163, 115, 0);
+    }
+}
+
+/* Animations for section separators */
+.section-separator {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-separator::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #D4A373, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+    will-change: transform;
+}
+
+.section-separator.visible::after {
+    transform: translateX(0);
+}
+
+/* Animations for footer elements */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212, 163, 115, 0.3), transparent);
+}
+
+.footer-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+footer.visible .footer-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media queries for responsive animations */
+@media (max-width: 768px) {
+    .animate-section,
+    .animate-item {
+        transform: translateY(20px);
+    }
+    
+    .main-content.animate-section {
+        transform: translateY(30px);
+    }
+    
+    .menu-item img,
+    .coffee-card img,
+    .dessert-card img,
+    .drink-card img {
+        transform: none;
+    }
+    
+    .menu-item:hover img,
+    .coffee-card:hover img,
+    .dessert-card:hover img,
+    .drink-card:hover img {
+        transform: none;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .animate-section,
+    .animate-item,
+    .btn,
+    .menu-item img,
+    .coffee-card img,
+    .dessert-card img,
+    .drink-card img,
+    .menu-item h3,
+    .coffee-card h3,
+    .dessert-card h3,
+    .drink-card h3,
+    .menu-item p,
+    .coffee-card p,
+    .dessert-card p,
+    .drink-card p,
+    .price,
+    .announcement,
+    .section-separator::after,
+    .footer-content {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        will-change: auto !important;
+    }
+    
+    .animate-section.visible,
+    .animate-item.visible,
+    .footer-content {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .scroll-progress {
+        display: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Class-based approach for reduced motion */
+.reduce-motion .animate-section,
+.reduce-motion .animate-item,
+.reduce-motion .btn,
+.reduce-motion .menu-item img,
+.reduce-motion .coffee-card img,
+.reduce-motion .dessert-card img,
+.reduce-motion .drink-card img,
+.reduce-motion .menu-item h3,
+.reduce-motion .coffee-card h3,
+.reduce-motion .dessert-card h3,
+.reduce-motion .drink-card h3,
+.reduce-motion .menu-item p,
+.reduce-motion .coffee-card p,
+.reduce-motion .dessert-card p,
+.reduce-motion .drink-card p,
+.reduce-motion .price,
+.reduce-motion .announcement,
+.reduce-motion .section-separator::after,
+.reduce-motion .footer-content {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+}
+
+.reduce-motion .animate-section.visible,
+.reduce-motion .animate-item.visible,
+.reduce-motion .footer-content {
+    opacity: 1;
+    transform: none;
+}
+
+.reduce-motion .scroll-progress {
+    display: none;
+}
+
+.reduce-motion html {
+    scroll-behavior: auto;
+} 

@@ -1,0 +1,354 @@
+/* Language Settings Styles */
+.language-preview-container {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.language-preview-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.language-preview {
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    min-height: 60px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+/* Language-specific styles */
+[data-language="my"] {
+    font-family: 'Myanmar Text', 'Pyidaungsu', sans-serif;
+}
+
+[data-language="th"] {
+    font-family: 'Kanit', 'Sarabun', sans-serif;
+}
+
+/* Settings Modal Styles */
+/* All settings styles have been moved to settings-popup.css */
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+}
+
+/* Dark Mode Styles */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --modal-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f8f9fa;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --modal-bg: #2d2d2d;
+    --input-bg: #333333;
+    --input-border: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--card-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-dark {
+    background-color: var(--card-bg) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-color);
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    border-color: var(--border-color);
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+}
+
+.form-control, .form-select {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--input-bg);
+    border-color: #80bdff;
+    color: var(--text-color);
+}
+
+.form-label {
+    color: var(--text-color);
+}
+
+.dropdown-menu {
+    background-color: var(--modal-bg);
+    border-color: var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--card-bg);
+}
+
+.dropdown-divider {
+    border-top-color: var(--border-color);
+}
+
+/* Theme Toggle Animation */
+.theme-toggle i.fa-sun {
+    color: #ffc107;
+}
+
+.theme-toggle i.fa-moon {
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] .theme-toggle i.fa-moon {
+    color: #ffc107;
+}
+
+[data-theme="dark"] .theme-toggle i.fa-sun {
+    color: #f8f9fa;
+}
+
+/* Elegant Alert Styles */
+.elegant-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.elegant-alert.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.elegant-alert-content {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-left: 4px solid #4CAF50;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.elegant-alert-icon {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.elegant-alert-message {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elegant-alert-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 15px;
+    transition: color 0.2s ease;
+}
+
+.elegant-alert-close:hover {
+    color: #333;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .elegant-alert-content {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border-left: 4px solid #66bb6a;
+}
+
+[data-theme="dark"] .elegant-alert-icon {
+    color: #66bb6a;
+}
+
+[data-theme="dark"] .elegant-alert-close {
+    color: #aaa;
+}
+
+[data-theme="dark"] .elegant-alert-close:hover {
+    color: #f5f5f5;
+}
+
+/* Remove remaining settings styles */
+.settings-section,
+.settings-section-title,
+.settings-container,
+.settings-alert,
+.cancel-settings-btn,
+.save-settings-btn {
+    /* These styles have been moved to settings-popup.css */
+}
+
+/* Responsive Design Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .modal-dialog {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 5px auto;
+    }
+    
+    .modal-body {
+        padding: 10px;
+    }
+    
+    .form-control, .form-select {
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .modal-body {
+        padding: 8px;
+        overflow-y: auto;
+    }
+    
+    .form-control, .form-select {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    .modal-footer {
+        padding: 10px;
+    }
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 320px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .modal-body {
+        padding: 10px;
+    }
+    
+    .form-control {
+        padding: 8px 12px;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+    }
+}
+
+/* Fix for notched phones */
+@supports (padding: max(0px)) {
+    .modal-body {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+    
+    .modal-footer {
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+} 

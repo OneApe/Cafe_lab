@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Lab - A unique coffee experience in Myanmar. Discover our signature drinks, artisanal pastries, and cozy atmosphere.">
+    <meta name="keywords" content="cafe, coffee, Myanmar, Yangon, specialty coffee, pastries, cafe lab">
+    <meta name="author" content="Cafe Lab">
+    <meta name="theme-color" content="#D4A373">
+    <meta property="og:title" content="Cafe Lab - Your Coffee Experience">
+    <meta property="og:description" content="Discover unique coffee creations and artisanal pastries at Cafe Lab.">
+    <meta property="og:image" content="https://cafe-lab.com/images/og-image.jpg">
+    <meta property="og:url" content="https://cafe-lab.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cafe Lab - Your Coffee Experience">
+    <meta name="twitter:description" content="Discover unique coffee creations and artisanal pastries at Cafe Lab.">
+    <meta name="twitter:image" content="https://cafe-lab.com/images/og-image.jpg">
+    <title>Cafe Lab - Your Coffee Experience</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="scroll-effects.css">
+    <link rel="stylesheet" href="settings-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="canonical" href="https://cafe-lab.com">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cafe Lab">
+    <meta name="application-name" content="Cafe Lab">
+    <meta name="msapplication-TileColor" content="#D4A373">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#D4A373" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1A1A1A" media="(prefers-color-scheme: dark)">
+    <link rel="manifest" href="manifest.json">
+    <script src="translations.js"></script>
+    <script src="language-manager.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Cafe Lab",
+        "image": "https://cafe-lab.com/images/logo.png",
+        "description": "A unique coffee experience in Myanmar",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Coffee Street",
+            "addressLocality": "Yangon",
+            "addressRegion": "Yangon",
+            "postalCode": "11011",
+            "addressCountry": "MM"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 16.8661,
+            "longitude": 96.1951
+        },
+        "url": "https://cafe-lab.com",
+        "telephone": "+95-1-234-5678",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "07:00",
+                "closes": "22:00"
+            }
+        ],
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <nav class="nav-menu">
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="fullmenu.html" class="nav-link" data-translate="nav_menu">Full Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="story.html" class="nav-link" data-translate="nav_story">Story of Cafe Lab</a>
+            </li>
+            <li class="nav-item">
+                <a href="event.html" class="nav-link" data-translate="nav_events">Events Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-translate="nav_gallery">Photo Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span data-translate="nav_settings">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 data-translate="header_title">Cafe Lab</h1>
+            <p class="description" data-translate="header_description">Experience the perfect blend of artisanal coffee and innovative technology in our unique cafe space.</p>
+            
+            <!-- Join Member Button (shown when user is not logged in) -->
+            <a href="#" class="join-member-btn" id="joinMemberBtn">
+                <span data-translate="join_member">Join Our Cafe Member</span>
+                <i class="fas fa-user-plus"></i>
+            </a>
+            
+            <!-- User Profile (shown when user is logged in) -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name" id="userName">User Name</span>
+                    <a href="#" class="logout-btn" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span data-translate="logout">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="special-announcement">
+            <h2 class="announcement-title" data-translate="weekend_special">Weekend Special</h2>
+            <p class="announcement-text" data-translate="weekend_special_text">Join us this weekend for our special brunch menu featuring locally sourced ingredients and our signature coffee blends. Live music from 11 AM to 2 PM.</p>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title" data-translate="todays_specials">Today's Specials</h2>
+            <p class="section-subtitle" data-translate="discover_specials">Discover our carefully crafted selection of the day</p>
+        </div>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Golden Phoenix Latte" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Golden Phoenix Latte</h3>
+                    <p class="menu-item-description">Our signature creation featuring Ethiopian Yirgacheffe espresso, velvety oat milk, turmeric, honey, and edible gold dust.</p>
+                    <div class="menu-item-price" data-price="6.95">$6.95</div>
+                    <a href="#" class="menu-item-button">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://tezlahotel.com.br/wp-content/uploads/2018/02/shutterstock_529515136-1000x650.jpg" alt="Midnight Orchid Mocha" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Midnight Orchid Mocha</h3>
+                    <p class="menu-item-description">A luxurious blend of dark chocolate, espresso, and house-made orchid syrup, topped with activated charcoal whipped cream.</p>
+                    <div class="menu-item-price" data-price="7.25">$7.25</div>
+                    <a href="#" class="menu-item-button">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Blue Lotus Cold Brew" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Blue Lotus Cold Brew</h3>
+                    <p class="menu-item-description">Our 24-hour slow-steeped cold brew infused with blue butterfly pea flower, coconut water, and a hint of vanilla.</p>
+                    <div class="menu-item-price" data-price="6.50">$6.50</div>
+                    <a href="#" class="menu-item-button">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="fullmenu.html" class="button primary" data-translate="view_full_menu">View Full Menu</a>
+            <a href="#reservation" class="button secondary" id="reservationBtn" data-translate="make_reservation">Make A Reservation</a>
+        </div>
+    </section>
+
+    <section class="coffee-types">
+        <div class="coffee-types-header">
+            <h2 class="coffee-types-title">Our Coffee Selection</h2>
+            <p class="coffee-types-subtitle">Discover the unique characteristics and origins of our premium coffee beans</p>
+        </div>
+
+        <div class="coffee-grid">
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Ethiopian Yirgacheffe" class="coffee-image">
+                <div class="coffee-content">
+                    <h3 class="coffee-name">Ethiopian Yirgacheffe</h3>
+                    <p class="coffee-origin">Origin: Yirgacheffe, Ethiopia</p>
+                    <p class="coffee-description">Known for its bright acidity and floral notes, this single-origin coffee offers a complex flavor profile with hints of citrus and jasmine.</p>
+                    <div class="coffee-characteristics">
+                        <span class="characteristic">Floral</span>
+                        <span class="characteristic">Citrus</span>
+                        <span class="characteristic">Medium Body</span>
+                    </div>
+                    <a href="#" class="coffee-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Colombian Supremo" class="coffee-image">
+                <div class="coffee-content">
+                    <h3 class="coffee-name">Colombian Supremo</h3>
+                    <p class="coffee-origin">Origin: Huila, Colombia</p>
+                    <p class="coffee-description">A well-balanced coffee with a rich, nutty flavor and subtle chocolate undertones. Perfect for those who enjoy a classic coffee taste.</p>
+                    <div class="coffee-characteristics">
+                        <span class="characteristic">Nutty</span>
+                        <span class="characteristic">Chocolate</span>
+                        <span class="characteristic">Full Body</span>
+                    </div>
+                    <a href="#" class="coffee-button">Learn More</a>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://media.licdn.com/dms/image/v2/D4E12AQGevv3etjofaQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1732396251914?e=2147483647&v=beta&t=UWxGKuNSwJWYDprWChvMuMGvFrO89WPYbMywfYDQ0aM" alt="Sumatra Mandheling" class="coffee-image">
+                <div class="coffee-content">
+                    <h3 class="coffee-name">Sumatra Mandheling</h3>
+                    <p class="coffee-origin">Origin: Sumatra, Indonesia</p>
+                    <p class="coffee-description">A distinctive coffee with earthy tones and a full body. Known for its low acidity and complex, spicy flavor profile.</p>
+                    <div class="coffee-characteristics">
+                        <span class="characteristic">Earthy</span>
+                        <span class="characteristic">Spicy</span>
+                        <span class="characteristic">Low Acidity</span>
+                    </div>
+                    <a href="#" class="coffee-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-our-cafe">
+            <h3 class="view-cafe-title">View Our Cafe</h3>
+            <p class="view-cafe-description">Explore our cozy cafe atmosphere, where every corner tells a story. From our artisanal coffee bar to our comfortable seating areas, discover the perfect spot for your next coffee experience.</p>
+            <a href="fullmenu.html#signature-cafe" class="view-cafe-button">Explore Cafe</a>
+        </div>
+    </section>
+
+    <section class="dessert-menu">
+        <div class="dessert-header">
+            <h2 class="dessert-title">Sweet Indulgences</h2>
+            <p class="dessert-subtitle">Handcrafted desserts that perfectly complement our coffee selection</p>
+        </div>
+
+        <div class="dessert-grid">
+            <div class="dessert-card">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Chocolate Lava Cake" class="dessert-image">
+                <div class="dessert-content">
+                    <h3 class="dessert-name">Chocolate Lava Cake</h3>
+                    <p class="dessert-description">Warm, rich chocolate cake with a molten center, served with vanilla bean ice cream and fresh berries.</p>
+                    <div class="dessert-price" data-price="8.50">$8.50</div>
+                    <div class="dessert-tags">
+                        <span class="dessert-tag">Signature</span>
+                        <span class="dessert-tag">Warm</span>
+                        <span class="dessert-tag">Chocolate</span>
+                    </div>
+                    <a href="#" class="dessert-button">Order Now</a>
+                </div>
+            </div>
+
+            <div class="dessert-card">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Tiramisu" class="dessert-image">
+                <div class="dessert-content">
+                    <h3 class="dessert-name">Classic Tiramisu</h3>
+                    <p class="dessert-description">Layers of coffee-soaked ladyfingers, mascarpone cream, and cocoa powder, made with our signature espresso.</p>
+                    <div class="dessert-price" data-price="7.95">$7.95</div>
+                    <div class="dessert-tags">
+                        <span class="dessert-tag">Italian</span>
+                        <span class="dessert-tag">Coffee</span>
+                        <span class="dessert-tag">Creamy</span>
+                    </div>
+                    <a href="#" class="dessert-button">Order Now</a>
+                </div>
+            </div>
+
+            <div class="dessert-card">
+                <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Macarons" class="dessert-image">
+                <div class="dessert-content">
+                    <h3 class="dessert-name">French Macarons</h3>
+                    <p class="dessert-description">Delicate almond meringue cookies with ganache filling. Available in assorted flavors: vanilla, raspberry, and pistachio.</p>
+                    <div class="dessert-price" data-price="12.00">$12.00</div>
+                    <div class="dessert-tags">
+                        <span class="dessert-tag">French</span>
+                        <span class="dessert-tag">Assorted</span>
+                        <span class="dessert-tag">Delicate</span>
+                    </div>
+                    <a href="#" class="dessert-button">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all-desserts">
+            <h3 class="view-all-title">Explore More Sweet Delights</h3>
+            <p class="view-all-description">Discover our full range of handcrafted desserts, from classic favorites to innovative creations. Each dessert is carefully prepared to complement our premium coffee selection.</p>
+            <a href="fullmenu.html#artisan-desserts" class="view-all-button">View All Desserts</a>
+        </div>
+    </section>
+
+    <section class="cold-brew-section">
+        <div class="section-header">
+            <h2 class="section-title">Cold Brew & Drinks</h2>
+            <p class="section-subtitle">Refresh yourself with our handcrafted cold beverages</p>
+        </div>
+
+        <div class="drinks-showcase">
+            <div class="featured-drink">
+                <div class="drink-image-container">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Signature Cold Brew" class="featured-drink-image">
+                    <div class="drink-overlay">
+                        <div class="drink-tags">
+                            <span class="drink-tag">Signature</span>
+                            <span class="drink-tag">Cold Brew</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-drink-content">
+                    <h3 class="featured-drink-title">Signature Cold Brew</h3>
+                    <p class="featured-drink-description">24-hour cold brewed with Ethiopian beans, served with vanilla and cinnamon notes. A perfect balance of smoothness and complexity.</p>
+                    <div class="drink-details">
+                        <span class="drink-price">$5.50</span>
+                        <span class="drink-size">16 oz</span>
+                    </div>
+                    <a href="#" class="featured-drink-button">Order Now</a>
+                </div>
+            </div>
+
+            <div class="drinks-grid">
+                <div class="drink-card">
+                    <div class="drink-card-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Iced Matcha Latte">
+                        <div class="drink-card-overlay">
+                            <div class="drink-card-tags">
+                                <span class="drink-card-tag">Matcha</span>
+                                <span class="drink-card-tag">Latte</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drink-card-content">
+                        <h4 class="drink-card-title">Iced Matcha Latte</h4>
+                        <p class="drink-card-description">Premium ceremonial grade matcha blended with almond milk and a touch of honey.</p>
+                        <div class="drink-card-price" data-price="5.95">$5.95</div>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card-image">
+                        <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Lemon Lavender Cooler">
+                        <div class="drink-card-overlay">
+                            <div class="drink-card-tags">
+                                <span class="drink-card-tag">Refreshing</span>
+                                <span class="drink-card-tag">Seasonal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drink-card-content">
+                        <h4 class="drink-card-title">Lemon Lavender Cooler</h4>
+                        <p class="drink-card-description">Fresh lemonade infused with lavender syrup and sparkling water, garnished with fresh lavender sprigs.</p>
+                        <div class="drink-card-price" data-price="5.25">$5.25</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all-drinks">
+            <div class="view-all-content">
+                <h3 class="view-all-title">Discover More Refreshing Drinks</h3>
+                <p class="view-all-description">Explore our full range of cold beverages, from classic cold brews to innovative seasonal creations.</p>
+                <a href="fullmenu.html#refreshing-cold-drinks" class="view-all-button">
+                    <span>View All Drinks</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="contact-title">Visit Us</h2>
+                <p class="contact-description">
+                    Experience the perfect blend of coffee and ambiance at our cafe. 
+                    We're located in the heart of the city, offering a cozy atmosphere 
+                    for your coffee moments.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-text">
+                            <span class="contact-label">Address</span>
+                            <div class="contact-value">
+                                123 Coffee Street<br>
+                                Downtown District<br>
+                                City, State 12345
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-text">
+                            <span class="contact-label">Opening Hours</span>
+                            <div class="contact-value">
+                                Monday - Friday: 7:00 AM - 9:00 PM<br>
+                                Saturday - Sunday: 8:00 AM - 10:00 PM
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-text">
+                            <span class="contact-label">Phone</span>
+                            <div class="contact-value">+1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <div class="contact-value">info@cafe-lab.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2150181250003!2d-73.987844924164!3d40.757978971389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="site-footer-content">
+            <div class="site-footer-section">
+                <h3>Cafe Lab</h3>
+                <p>Experience the perfect blend of coffee and technology in our unique cafe space.</p>
+                <div class="site-footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="site-footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="fullmenu.html">Menu</a></li>
+                    <li><a href="story.html">Story</a></li>
+                    <li><a href="event.html">Events</a></li>
+                </ul>
+            </div>
+            <div class="site-footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, City</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@cafe-lab.com</p>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <p>&copy; 2024 Cafe Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Reservation Form Modal -->
+    <div class="reservation-modal" id="reservationModal">
+        <div class="reservation-content">
+            <div class="reservation-header">
+                <span class="close-modal">&times;</span>
+                <h2>Reserve Your Table</h2>
+                <p class="reservation-subtitle">Experience the perfect blend of coffee and comfort</p>
+            </div>
+            <form id="reservationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i>
+                            Full Name
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i>
+                            Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">
+                            <i class="fas fa-users"></i>
+                            Number of Guests
+                        </label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8 People</option>
+                            <option value="9">9+ People</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">
+                            <i class="fas fa-calendar"></i>
+                            Date
+                        </label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">
+                            <i class="fas fa-clock"></i>
+                            Time
+                        </label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">
+                        <i class="fas fa-comment"></i>
+                        Special Requests
+                    </label>
+                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requirements or preferences?"></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-check-circle"></i>
+                        Confirm Reservation
+                    </button>
+                    <p class="form-note">We'll send you a confirmation email shortly</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="home.js"></script>
+    <script src="scroll-effects.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the modal
+            const modal = document.getElementById('reservationModal');
+            const btn = document.getElementById('reservationBtn');
+            const span = document.getElementsByClassName('close-modal')[0];
+            const form = document.getElementById('reservationForm');
+
+            // When the user clicks the button, open the modal
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.style.display = "block";
+            });
+
+            // When the user clicks on <span> (x), close the modal
+            span.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Handle form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Generate a random waiting token (2 letters followed by 3 numbers)
+                const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                const tokenLetter1 = letters.charAt(Math.floor(Math.random() * letters.length));
+                const tokenLetter2 = letters.charAt(Math.floor(Math.random() * letters.length));
+                const tokenNumber = Math.floor(100 + Math.random() * 900); // 3-digit number
+                const waitingToken = `${tokenLetter1}${tokenLetter2}-${tokenNumber}`;
+                
+                // Get customer name for personalization
+                const customerName = document.getElementById('name').value;
+                
+                // Create success message with token
+                const successMessage = `
+                    <div class="reservation-success">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Reservation Confirmed!</h3>
+                        <p>Thank you, ${customerName}! Your reservation has been successfully completed.</p>
+                        <div class="token-container">
+                            <p>Your waiting token:</p>
+                            <div class="token-number">${waitingToken}</div>
+                        </div>
+                        <p class="token-instructions">Please show this token when you arrive at the cafe.</p>
+                        <button class="close-success-btn">Close</button>
+                    </div>
+                `;
+                
+                // Create and show success modal
+                const successModal = document.createElement('div');
+                successModal.className = 'success-modal';
+                successModal.innerHTML = successMessage;
+                document.body.appendChild(successModal);
+                
+                // Close success modal when button is clicked
+                const closeSuccessBtn = successModal.querySelector('.close-success-btn');
+                closeSuccessBtn.addEventListener('click', function() {
+                    successModal.remove();
+                    modal.style.display = "none";
+                    form.reset();
+                });
+                
+                // Here you would typically send the form data to your server
+                // For demo purposes, we're just showing the success message
+            });
+        });
+    </script>
+
+    <!-- Membership Modal -->
+    <div class="membership-modal" id="membershipModal">
+        <div class="membership-content">
+            <div class="membership-header">
+                <span class="close-membership-modal">&times;</span>
+                <h2>Cafe Lab Membership</h2>
+                <p class="membership-subtitle">Join our community and enjoy exclusive benefits</p>
+            </div>
+            
+            <div class="membership-tabs">
+                <button class="tab-button active" data-tab="login">Login</button>
+                <button class="tab-button" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Login Form -->
+                <form id="loginForm" class="membership-form active">
+                    <div class="form-group">
+                        <label for="login-email">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input type="email" id="login-email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                </form>
+                
+                <!-- Sign Up Form -->
+                <form id="signupForm" class="membership-form">
+                    <div class="form-group">
+                        <label for="signup-name">
+                            <i class="fas fa-user"></i>
+                            Full Name
+                        </label>
+                        <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input type="email" id="signup-email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-confirm-password">
+                            <i class="fas fa-lock"></i>
+                            Confirm Password
+                        </label>
+                        <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="terms-agreement">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-user-plus"></i>
+                        Sign Up
+                    </button>
+                </form>
+            </div>
+            
+            <div class="membership-benefits">
+                <h3>Membership Benefits</h3>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-gift"></i> 10% off on all coffee drinks</li>
+                    <li><i class="fas fa-birthday-cake"></i> Free birthday treat</li>
+                    <li><i class="fas fa-star"></i> Earn points with every purchase</li>
+                    <li><i class="fas fa-bell"></i> Exclusive event invitations</li>
+                    <li><i class="fas fa-percent"></i> Monthly member discounts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h2 data-translate="profile_settings">Profile Settings</h2>
+                <button class="close-settings-btn" onclick="closeSettings()">&times;</button>
+            </div>
+            <div class="settings-body">
+                <div class="settings-section">
+                    <h3 data-translate="display_name">Display Name</h3>
+                    <div class="settings-option">
+                        <label for="displayName" data-translate="your_display_name">Your display name</label>
+                        <input type="text" id="displayName" placeholder="Enter your display name">
+                    </div>
+                    <div class="settings-option">
+                        <label for="email" data-translate="your_email">Your email</label>
+                        <input type="email" id="email" placeholder="your.email@example.com">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3 data-translate="notifications">Notifications</h3>
+                    <div class="settings-option">
+                        <label for="emailNotif" data-translate="email_notifications">Email Notifications</label>
+                        <input type="checkbox" id="emailNotif">
+                    </div>
+                    <div class="settings-option">
+                        <label for="smsNotif" data-translate="sms_notifications">SMS Notifications</label>
+                        <input type="checkbox" id="smsNotif">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3 data-translate="currency_settings">Currency Settings</h3>
+                    <div class="settings-option">
+                        <div class="option-label">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span data-translate="select_currency">Select Currency</span>
+                        </div>
+                        <select class="currency-select" id="currencySelect">
+                            <option value="USD">USD ($)</option>
+                            <option value="THB">THB (฿)</option>
+                            <option value="MMK">MMK (K)</option>
+                        </select>
+                    </div>
+                    <div class="preview-section">
+                        <p data-translate="price_preview">Price Preview:</p>
+                        <div class="preview-price" id="pricePreview">$6.95</div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3 data-translate="language_settings">Language Settings</h3>
+                    <div class="settings-option">
+                        <div class="option-label">
+                            <i class="fas fa-language"></i>
+                            <span data-translate="select_language">Select Language</span>
+                        </div>
+                        <select class="language-select" id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="th">ไทย</option>
+                            <option value="my">မြန်မာ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3 data-translate="theme_settings">Theme Settings</h3>
+                    <div class="settings-option">
+                        <div class="option-label">
+                            <i class="fas fa-palette"></i>
+                            <span data-translate="theme_mode">Theme Mode</span>
+                        </div>
+                        <select class="theme-select" id="themeSelect">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="system">System Default</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-footer">
+                <button class="save-settings-btn" data-translate="save_settings">Save Settings</button>
+                <button class="cancel-settings-btn" data-translate="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-content">
+            <span class="close-product-modal">&times;</span>
+            <div class="product-modal-body">
+                <div class="product-image-container">
+                    <img src="" alt="" id="modalProductImage">
+                </div>
+                <div class="product-details">
+                    <h2 id="modalProductTitle"></h2>
+                    <div class="product-price" id="modalProductPrice"></div>
+                    <div class="product-description" id="modalProductDescription"></div>
+                    <div class="product-features">
+                        <h3>Why It's Famous</h3>
+                        <p id="modalProductFamous"></p>
+                        <h3>Taste Profile</h3>
+                        <p id="modalProductTaste"></p>
+                        <h3>Brewing Method</h3>
+                        <p id="modalProductBrewing"></p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="order-now-btn">Order Now</button>
+                        <button class="add-to-favorites-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Product data
+        const products = {
+            'golden-phoenix-latte': {
+                title: 'Golden Phoenix Latte',
+                price: '$6.95',
+                image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                description: 'Our signature creation featuring Ethiopian Yirgacheffe espresso, velvety oat milk, turmeric, honey, and edible gold dust. This luxurious beverage combines the rich, complex flavors of premium coffee with the health benefits of turmeric and the natural sweetness of honey.',
+                famous: 'The Golden Phoenix Latte has gained international recognition for its unique combination of premium coffee and wellness ingredients. It has been featured in several coffee magazines and has won the "Most Innovative Coffee Creation" award at the International Coffee Festival 2023.',
+                taste: 'This latte offers a complex flavor profile with notes of bright citrus from the Ethiopian Yirgacheffe, subtle earthiness from turmeric, and a delicate sweetness from honey. The oat milk provides a creamy, velvety texture that perfectly balances the bold coffee flavors.',
+                brewing: 'Our baristas carefully craft this drink using a precise 18g dose of freshly ground Ethiopian Yirgacheffe beans, extracted at 94°C for 28 seconds. The espresso is then combined with steamed oat milk, turmeric paste, and honey, finished with a dusting of edible gold.'
+            },
+            'midnight-orchid-mocha': {
+                title: 'Midnight Orchid Mocha',
+                price: '$7.25',
+                image: 'https://tezlahotel.com.br/wp-content/uploads/2018/02/shutterstock_529515136-1000x650.jpg',
+                description: 'A luxurious blend of dark chocolate, espresso, and house-made orchid syrup, topped with activated charcoal whipped cream. This dramatic and elegant beverage combines the rich flavors of premium chocolate with the delicate floral notes of orchid.',
+                famous: 'The Midnight Orchid Mocha has become a social media sensation, known for its striking appearance and unique flavor combination. It has been featured in numerous food blogs and has a dedicated following among coffee enthusiasts and food photographers.',
+                taste: 'This mocha presents a sophisticated flavor profile with rich dark chocolate notes, balanced by the subtle floral undertones of orchid. The activated charcoal whipped cream adds a dramatic visual element while providing a smooth, creamy finish that enhances the overall experience.',
+                brewing: 'We use a double shot of our signature espresso blend, combined with our house-made dark chocolate ganache and orchid syrup. The drink is finished with our signature activated charcoal whipped cream, creating a stunning visual contrast and adding a luxurious texture.'
+            },
+            'blue-lotus-cold-brew': {
+                title: 'Blue Lotus Cold Brew',
+                price: '$6.50',
+                image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                description: 'Our 24-hour slow-steeped cold brew infused with blue butterfly pea flower, coconut water, and a hint of vanilla. This refreshing beverage combines the smooth, low-acidity profile of cold brew with the natural color-changing properties of butterfly pea flower.',
+                famous: 'The Blue Lotus Cold Brew has gained popularity for its mesmerizing color-changing properties and refreshing taste. It has been featured in several lifestyle magazines and has become a favorite among health-conscious coffee drinkers.',
+                taste: 'This cold brew offers a smooth, full-bodied coffee flavor with subtle notes of coconut and vanilla. The butterfly pea flower adds a delicate floral note and creates a beautiful color-changing effect when mixed with acidic ingredients.',
+                brewing: 'We cold brew our signature coffee blend for 24 hours at a controlled temperature of 4°C. The concentrate is then combined with fresh coconut water and vanilla extract, and infused with butterfly pea flower for its natural color and subtle floral notes.'
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get modal elements
+            const productModal = document.getElementById('productModal');
+            const closeProductModal = document.querySelector('.close-product-modal');
+            const modalProductImage = document.getElementById('modalProductImage');
+            const modalProductTitle = document.getElementById('modalProductTitle');
+            const modalProductPrice = document.getElementById('modalProductPrice');
+            const modalProductDescription = document.getElementById('modalProductDescription');
+            const modalProductFamous = document.getElementById('modalProductFamous');
+            const modalProductTaste = document.getElementById('modalProductTaste');
+            const modalProductBrewing = document.getElementById('modalProductBrewing');
+
+            // Add click event listeners to all "Learn More" buttons
+            document.querySelectorAll('.menu-item-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productId = this.closest('.menu-item').querySelector('.menu-item-title').textContent.toLowerCase().replace(/\s+/g, '-');
+                    const product = products[productId];
+                    
+                    if (product) {
+                        modalProductImage.src = product.image;
+                        modalProductImage.alt = product.title;
+                        modalProductTitle.textContent = product.title;
+                        modalProductPrice.textContent = product.price;
+                        modalProductDescription.textContent = product.description;
+                        modalProductFamous.textContent = product.famous;
+                        modalProductTaste.textContent = product.taste;
+                        modalProductBrewing.textContent = product.brewing;
+                        
+                        productModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Close modal when clicking the close button
+            closeProductModal.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === productModal) {
+                    productModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme switching functionality
+            const themeSelect = document.getElementById('themeSelect');
+            const saveSettingsBtn = document.querySelector('.save-settings-btn');
+            const cancelSettingsBtn = document.querySelector('.cancel-settings-btn');
+            const settingsModal = document.getElementById('settingsModal');
+            const closeSettingsBtn = document.querySelector('.close-settings-btn');
+            const currencySelect = document.getElementById('currencySelect');
+            const languageSelect = document.getElementById('languageSelect');
+            const pricePreview = document.getElementById('pricePreview');
+
+            // Load saved settings
+            function loadSettings() {
+                const savedCurrency = localStorage.getItem('currency') || 'USD';
+                const savedLanguage = localStorage.getItem('language') || 'en';
+                const savedTheme = localStorage.getItem('theme') || 'light';
+
+                currencySelect.value = savedCurrency;
+                languageSelect.value = savedLanguage;
+                themeSelect.value = savedTheme;
+
+                updatePricePreview(savedCurrency);
+            }
+
+            // Update price preview
+            function updatePricePreview(currency) {
+                const basePrice = 6.95; // Example base price in USD
+                const exchangeRates = {
+                    USD: 1,
+                    THB: 35.5,
+                    MMK: 2100
+                };
+
+                const rate = exchangeRates[currency];
+                const convertedPrice = basePrice * rate;
+
+                let currencySymbol;
+                switch(currency) {
+                    case 'THB':
+                        currencySymbol = '฿';
+                        break;
+                    case 'MMK':
+                        currencySymbol = 'K';
+                        break;
+                    default:
+                        currencySymbol = '$';
+                }
+
+                const formattedPrice = currency === 'MMK' 
+                    ? Math.round(convertedPrice).toLocaleString()
+                    : convertedPrice.toFixed(2);
+
+                pricePreview.textContent = `${currencySymbol}${formattedPrice}`;
+            }
+
+            // Load settings when modal opens
+            document.querySelector('.settings-button').addEventListener('click', function() {
+                settingsModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                loadSettings();
+            });
+
+            // Close settings modal
+            closeSettingsBtn.addEventListener('click', function() {
+                settingsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close settings modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === settingsModal) {
+                    settingsModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Currency change handler
+            currencySelect.addEventListener('change', function() {
+                const selectedCurrency = this.value;
+                updatePricePreview(selectedCurrency);
+            });
+
+            // Language change handler
+            languageSelect.addEventListener('change', function() {
+                const selectedLanguage = this.value;
+                if (window.languageManager) {
+                    window.languageManager.setLanguage(selectedLanguage);
+                }
+            });
+
+            // Theme change handler
+            themeSelect.addEventListener('change', function() {
+                const selectedTheme = this.value;
+                document.documentElement.setAttribute('data-theme', selectedTheme);
+            });
+
+            // Save settings
+            saveSettingsBtn.addEventListener('click', function() {
+                const selectedCurrency = currencySelect.value;
+                const selectedLanguage = languageSelect.value;
+                const selectedTheme = themeSelect.value;
+
+                localStorage.setItem('currency', selectedCurrency);
+                localStorage.setItem('language', selectedLanguage);
+                localStorage.setItem('theme', selectedTheme);
+
+                // Apply theme
+                document.documentElement.setAttribute('data-theme', selectedTheme);
+
+                // Apply language
+                if (window.languageManager) {
+                    window.languageManager.setLanguage(selectedLanguage);
+                }
+
+                // Trigger currency update event
+                document.dispatchEvent(new CustomEvent('currencyChanged', { detail: selectedCurrency }));
+
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'settings-success';
+                successMessage.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <p data-translate="settings_saved">Settings saved successfully!</p>
+                `;
+                settingsModal.querySelector('.settings-content').appendChild(successMessage);
+
+                // Remove success message after 2 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 2000);
+
+                // Close modal after a short delay
+                setTimeout(() => {
+                    settingsModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 2000);
+            });
+
+            // Cancel settings
+            cancelSettingsBtn.addEventListener('click', function() {
+                // Reset to saved values
+                loadSettings();
+                settingsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Initialize settings
+            loadSettings();
+        });
+    </script>
+</body>
+</html> 
